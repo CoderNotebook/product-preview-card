@@ -1,0 +1,111 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 450px;
+
+  &__product-photo {
+    width: calc($min-width / 2);
+    background-image: url($product-desktop);
+    background-repeat: no-repeat;
+    background-size: calc($min-width / 2), $min-height;
+    @include border-radius($ten-radius, "left");
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: $min-height;
+  width: calc($min-width / 2);
+  padding: 32px;
+  background-color: white;
+
+  &__title {
+    @include font-properties(
+      $size: 1.2rem,
+      $weight: 500,
+      $font: $font-style-montserrat,
+      $color: $saurus-color
+    );
+    letter-spacing: 5px;
+  }
+
+  &__subtitle {
+    @include font-properties(
+      $size: 3.2em,
+      $weight: 700,
+      $font: $font-style-fraunces,
+      $color: $gunmetal-color
+    );
+  }
+
+  &__description {
+    @include font-properties(
+      $size: 1.4rem,
+      $weight: 500,
+      $font: $font-style-montserrat,
+      $color: $saurus-color
+    );
+    line-height: 23px;
+  }
+
+  &__prices {
+    display: flex;
+  }
+
+  &__price-new {
+    @include font-properties(
+      $size: 3.2rem,
+      $weight: 700,
+      $font: $font-style-fraunces,
+      $color: $aquamarine-color
+    );
+  }
+
+  &__price-old {
+    @include font-properties(
+      $size: 1.3rem,
+      $weight: 500,
+      $font: $font-style-montserrat,
+      $color: $saurus-color
+    );
+    text-decoration: line-through;
+    line-height: 38px;
+    margin-left: 19px;
+  }
+
+  @include border-radius($ten-radius);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-radius: 8px;
+
+  @include font-properties(
+    $size: 1.4rem,
+    $weight: 700,
+    $font: $font-style-montserrat,
+    $color: white
+  );
+
+  background-color: $aquamarine-color;
+
+  &__image {
+    width: 15px;
+    height: 16px;
+  }
+
+  &__text {
+    margin-left: 8px;
+  }
+}
+
+.button--is-active:hover {
+  background-color: $aquamarine-color-hover;
+  cursor: pointer;
+}

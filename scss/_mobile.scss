@@ -1,0 +1,24 @@
+@media screen and (max-width: 620px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    width: 343px;
+    height: 611px;
+
+    &__product-photo {
+      width: 343px;
+      height: 458px;
+      background-image: url($product-mobile);
+      background-repeat: no-repeat;
+      background-size: 343px, 458px;
+      @include border-radius(10px, "photo");
+    }
+  }
+
+  .product {
+    width: 343px;
+    height: 670px;
+    padding: 24px;
+    @include border-radius(10px, "card");
+  }
+}
